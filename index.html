@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swindlestones Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Zeyada&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="content-container">
+        <div class="main-content">
+            <div id="game-container">
+                <h1>Swindlestones <br> (Liar's Dice)</h1>
+                        <!-- AI's Dice (initially hidden) -->
+                <div id="ai-area" class="designated-ai-area">
+                    <h2>AI's Dice</h2>
+                    <div id="ai-dice" class="dice-container">
+                        <!-- JavaScript will dynamically update dice here -->
+                    </div>
+                </div>
+
+                <!-- Player's Dice -->
+                <div id="player-area">
+                    <h2>Your Dice</h2>
+                    <div id="player-dice" class="dice-container">
+                        <!-- JavaScript will dynamically update dice here -->
+                    </div>
+                </div>
+
+
+                <!-- Game Actions -->
+                <div id="action-area">
+                    <h2>Make Your Move</h2>
+                    <button id="roll-dice">Roll Dice</button>
+                    <br>
+                    <div id="bet-area">
+                        <input type="number" id="bet-quantity" min="1" placeholder="Dice Quantity"> <p> of </p>
+                        <input type="number" id="bet-value" min="1" max="6" placeholder="Dice Value">
+                        <button id="make-bet">Make Bet</button>
+                    </div>
+                    <br>
+                    <button id="call-bluff">Call Bluff</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-info">
+        <!-- Game Info and History -->
+            <div id="game-info">
+                <h2>Game Info</h2>
+                <p id="current-bet">Current Bet: None</p>
+                <p id="game-status">Game Status: In Progress</p>
+                <div id="bet-history">
+                    <h3>Bet History</h3>
+                    <!-- Bet history will be listed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
